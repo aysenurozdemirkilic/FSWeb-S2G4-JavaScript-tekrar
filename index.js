@@ -64,8 +64,9 @@ function CemberinCevresi(yariCapi) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yariCapi) {
+  return pi * yariCapi * yariCapi
+  
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -99,27 +100,59 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) {
+      enkucuk = sayilar[i];
+  }
+  if (sayilar[i] > enbuyuk) {
+      enbuyuk = sayilar[i];
+  }
+}
+
 
 // 3b çözümü:
 
-/* kodlar buraya */
+let ucetambolunenler = [];
+sayilar.forEach(sayi => {
+    if (sayi % 3 === 0) {
+        ucetambolunenler.push(sayi);
+    }
+});
+
 
 // 3c çözümü:
 
-/* kodlar buraya */
+let ucebolunenlerintoplami = ucetambolunenler.reduce((acc, curr) => acc + curr, 0);
+
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+let besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+let siralisayilar = besyuzdenkucuksayilar.slice().sort((a, b) => a - b);
+
 
 // 3f çözümü
 
-/* kodlar buraya */
+let tekraredensayilar = [];
+let tekrarObj = {};
+or (let i = 0; i < sayilar.length; i++) {
+  if (tekrarObj[sayilar[i]] === undefined) {
+      tekrarObj[sayilar[i]] = 1;
+  } else {
+      tekrarObj[sayilar[i]]++;
+  }
+}
+for (const key in tekrarObj) {
+  if (tekrarObj[key] > 1) {
+      tekraredensayilar.push(⁠ ${key} sayısı ${tekrarObj[key]} kere tekrar edilmiştir ⁠);
+  }
+}
+
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
